@@ -1,0 +1,180 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif; /* Подключаем шрифт Roboto */
+    background: #f0f0f0; /* Светлый фон для страницы */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px; /* Отступ снизу для футера */
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px;
+    color: #333;  /* Цвет текста */
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-top: 20px;
+    color: #4CAF50; /* Зеленый цвет для заголовков */
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Стили для параграфов */
+p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    padding: 0 20px;
+    color: #666; /* Цвет текста для параграфов */
+}
+
+/* Стили для кнопок */
+button {
+    padding: 15px 30px;
+    background-color: #4CAF50; /* Зеленая кнопка */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Подсветка строки при наведении */
+}
+
+/* Стили для формы */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50; /* Зеленая рамка при фокусе */
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Стили для хедера */
+header {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/57127c202fe13107b61658fd/1712255709886-11K4YDB7FSOVXC6VTVOB/Pride+1500+x+600.jpg?format=1500w'); /* Здесь будет картинка фона для хедера */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень для хедера */
+}
+
+/* Стили для секций */
+section {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
