@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация изображений</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Генерация изображений через MidJourney</h1>
+    <input id="prompt" type="text" placeholder="Введите описание...">
+    <button onclick="generateImage()">Сгенерировать</button>
+    <p id="message"></p>
+
+    <script>
+        async function generateImage() {
+            const prompt = document.getElementById("prompt").value;
+            if (!prompt) {
+                document.getElementById("message").textContent = "Введите описание!";
+                return;
+            }
+
+            document.getElementById("message").textContent = "Запрос отправляется...";
+            const response = await fetch("/generate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ prompt }),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                document.getElementById("message").textContent = result.message;
+            } else {
+                document.getElementById("message").textContent = result.error;
+            }
+        }
+    </script>
+</body>
+</html>
